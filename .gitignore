@@ -58,3 +58,8 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+#LDGAMEJAM
+*LDJAM47/Library/ShaderCache
+*LDJAM47/Library/Artifacts
+*LDJAM47/Library/PackageCache
+*LDJAM47/obj/
