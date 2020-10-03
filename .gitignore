@@ -60,7 +60,7 @@ crashlytics-build.properties
 
 #LDGAMEJAM
 -- folders
-*LDJAM47/Library/ShaderCache
+
 *LDJAM47/Library/Artifacts
 *LDJAM47/Library/PackageCache
 *LDJAM47/obj/
