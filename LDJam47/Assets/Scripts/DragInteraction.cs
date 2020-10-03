@@ -7,12 +7,17 @@ using UnityEngine;
 public class DragInteraction : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Vector3 screenPoint;
+    private Vector3 pickupScreenPoint;
     private Vector3 offsetFromMousePointer;
     private Vector3 pickupOffset;
-    private float worldHeight;
+    private float previousWorldY;
+
+    public float heightOfPickup = 0.5f;
+
+    private Rigidbody rb;
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -22,29 +27,32 @@ public class DragInteraction : MonoBehaviour
 
     void OnMouseDown()
     {
-        screenPoint = Camera.main.WorldToScreenPoint( transform.position );
-        offsetFromMousePointer = transform.position - Camera.main.ScreenToWorldPoint( new Vector3( Input.mousePosition.x, Input.mousePosition.y, screenPoint.z ) );
-        pickupOffset = Vector3.up * 0.2f;
+        pickupScreenPoint = Camera.main.WorldToScreenPoint( transform.position );
+        offsetFromMousePointer = transform.position - Camera.main.ScreenToWorldPoint( new Vector3( Input.mousePosition.x, Input.mousePosition.y, pickupScreenPoint.z ) );
+        pickupOffset = Vector3.up * heightOfPickup;
 
-        worldHeight = transform.position.y;
+        previousWorldY = transform.position.y;
+
+        // rb.isKinematic = true;
+        // rb.detectCollisions = false;
     }
 
     void OnMouseDrag()
     {
-        Vector3 currentScreenPoint = new Vector3( Input.mousePosition.x, Input.mousePosition.y, screenPoint.z );
+        Vector3 currentScreenPoint = new Vector3( Input.mousePosition.x, Input.mousePosition.y, pickupScreenPoint.z );
 
-        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint( currentScreenPoint );
-        mouseWorld.y = worldHeight;
-        Vector3 currentPosition = mouseWorld + offsetFromMousePointer + pickupOffset;
-        transform.position = currentPosition;
+        Vector3 mouseWorldPoint = Camera.main.ScreenToWorldPoint( currentScreenPoint );
+        mouseWorldPoint.y = previousWorldY;
+        Vector3 currentPosition = mouseWorldPoint + offsetFromMousePointer + pickupOffset;
+
+        rb.AddForce( currentPosition - transform.position );
+
+        Vector3 overrideHeight = transform.position;
+        overrideHeight.y = pickupOffset.y + previousWorldY;
+        transform.position = overrideHeight;
     }
 
     void OnMouseUp()
     {
-        Rigidbody rb = GetComponent<Rigidbody>();
-        if ( rb )
-        {
-            rb.velocity = Vector3.zero;
-        }
     }
 }
