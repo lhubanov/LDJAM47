@@ -58,3 +58,24 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+#LDGAMEJAM
+-- folders
+*LDJAM47/Library/ShaderCache
+*LDJAM47/Library/Artifacts
+*LDJAM47/Library/PackageCache
+*LDJAM47/obj/
+*LDJam47/Temp/
+*LDJam47/Library/
+
+-- files
+LDJam47/Library/ArtifactDB
+LDJam47/Library/ScriptAssemblies
+LDJam47/Library/CurrentLayout-default.dwlt
+LDJam47/Library/Style.catalog
+LDJam47/Library/expandedItems
+LDJam47/Library/EditorSnapSettings.asset
+LDJam47/Library/LastSceneManagerSetup.txt
+LDJam47/Library/SceneVisibilityState.asset
+LDJam47/Library/SourceAssetDB
+LDJam47/Library/SourceAssetDB-lock
+LDJam47/Library/StateCache/SceneView/
