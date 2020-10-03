@@ -1,7 +1,6 @@
 Ludum Dare 47 Gamejam
 
 Team Members
-
 Lachezar Hubanov
 
 Archie Buck
