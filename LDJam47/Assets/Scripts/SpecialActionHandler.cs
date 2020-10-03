@@ -16,9 +16,9 @@ public class SpecialActionHandler : MonoBehaviour
 
 
     // FIXME: LH:
-    // - Need to add collider
-    // - Need to set right sprite before animating
-    //      - Then just play the same sprite animation?
+        // - Need to add collider
+        // - Need to set right sprite before animating
+        //      - Then just play the same sprite animation?
     // - Can play other animations/two animations at same time?
     // - Can play sounds
 
@@ -47,7 +47,7 @@ public class SpecialActionHandler : MonoBehaviour
                     // - whatever I'm tired
                     reactionSpriteRenderer.sprite = reactionSprites[ (int)SPECIAL_ACTION.HUM_MUSIC ];
 
-                    animator.Play( Animator.StringToHash("SpriteReactionAnimation") );
+                    animator.Play( Animator.StringToHash("RobotSpriteReaction") );
                     break;
                 }
             case SPECIAL_ACTION.SMILE:
@@ -55,7 +55,7 @@ public class SpecialActionHandler : MonoBehaviour
                     reactionSpriteRenderer.sprite = reactionSprites[(int)SPECIAL_ACTION.SMILE];
 
 
-                    animator.Play( Animator.StringToHash("SpriteReactionAnimation") );
+                    animator.Play( Animator.StringToHash("RobotSpriteReaction") );
                     break;
                 }
         }
