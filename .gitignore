@@ -64,6 +64,8 @@ crashlytics-build.properties
 *LDJAM47/Library/Artifacts
 *LDJAM47/Library/PackageCache
 *LDJAM47/obj/
+*LDJam47/Temp/
+*LDJam47/Library/
 
 -- files
 LDJam47/Library/ArtifactDB
