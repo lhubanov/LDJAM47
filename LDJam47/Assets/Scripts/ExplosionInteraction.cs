@@ -5,6 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(SphereCollider))]
 public class ExplosionInteraction : SphericalInteractionBase
 {
+    private float timeLeft;
+    void OnEnable()
+    {
+        timeLeft = 2.0f;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +20,11 @@ public class ExplosionInteraction : SphericalInteractionBase
     // Update is called once per frame
     void Update()
     {
-        
+        timeLeft -= Time.deltaTime;
+        if ( timeLeft < 0.0f )
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     void OnTriggerStay( Collider other )

@@ -2,6 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class SphericalInteractionBase : MonoBehaviour, ISphericalInfluenceInteraction
+public abstract class SphericalInteractionBase : MonoBehaviour
 {
 }

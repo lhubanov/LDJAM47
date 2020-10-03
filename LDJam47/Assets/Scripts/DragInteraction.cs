@@ -14,6 +14,8 @@ public class DragInteraction : MonoBehaviour
 
     public float heightOfPickup = 0.5f;
 
+    public GameObject effect;
+
     private Rigidbody rb;
     void Start()
     {
@@ -54,5 +56,16 @@ public class DragInteraction : MonoBehaviour
 
     void OnMouseUp()
     {
+        if ( effect )
+        {
+			Debug.Log("Instantiating effect prefab");
+            GameObject effectInstance = Instantiate( effect, transform.position, Quaternion.identity );
+            SphericalInteractionBase sphericalEffect = effectInstance.GetComponent<SphericalInteractionBase>();
+            if ( sphericalEffect )
+            {
+                Debug.Log("enabling sphere effect");
+                sphericalEffect.enabled = true;
+            }
+        }
     }
 }
