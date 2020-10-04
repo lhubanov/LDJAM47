@@ -39,6 +39,7 @@ public class SpecialActionHandler : MonoBehaviour
         SpecialActionEmitter specialActionEmitter = other.GetComponent<SpecialActionEmitter>();
         if ( specialActionEmitter )
         {
+            Debug.Log("Special action emitter found!");
             DoSpecialAction( specialActionEmitter.GetSpecialAction() );
         }
     }
