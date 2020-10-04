@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     public Camera cam;
     public NavMeshAgent agent;
 
+    [SerializeField]
+    private int TargetLeeway = 5;
+
     private void Start()
     {
         StartCycle();
@@ -20,37 +23,43 @@ public class PlayerController : MonoBehaviour
         CurrentObjective = 0;
 
         GameObject[] ObjectiveMarkers = GameObject.FindGameObjectsWithTag("Objective");
+
+        Objectives = new Vector3[ObjectiveMarkers.Length];
         for (int i = 0; i < ObjectiveMarkers.Length; i = i + 1)
         {
             Objectives[i] = ObjectiveMarkers[i].transform.position;
         }
-        
+
+        agent.SetDestination(Objectives[CurrentObjective]);
     }
 
     void ProgramToReturnHome()
     {
-        // Set Destination to the Home Pad;
+        GameObject RobotHome = GameObject.FindGameObjectWithTag("RobotHome");
+        if( RobotHome )
+        {
+            agent.SetDestination(RobotHome.transform.position);
+        }
     }
 
+    bool IsWithinBound( float position, float target )
+    {
+        return position == Mathf.Clamp(position, target - TargetLeeway, target + TargetLeeway);
+    }
     // Update is called once per frame
     void Update()
     {
-        if( Input.GetMouseButtonDown( 0))
+        float dist = Vector3.Distance(agent.transform.position, Objectives[CurrentObjective]);
+        if ( dist < TargetLeeway  )
         {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if( Physics.Raycast(ray, out hit) )
-            {
-                agent.SetDestination(hit.point);
-            }
+            CompleteObjective();
         }
     }
 
     void CompleteObjective()
     {
         CurrentObjective = CurrentObjective + 1;
-        if (CurrentObjective > Objectives.Length )
+        if (CurrentObjective >= Objectives.Length )
         {
             ProgramToReturnHome();
         }
