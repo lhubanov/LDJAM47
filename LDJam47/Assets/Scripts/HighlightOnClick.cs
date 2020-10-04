@@ -6,19 +6,30 @@ public class HighlightOnClick : MonoBehaviour
     [SerializeField]
     private Material material;
 
+    private float cachedOutlineThickness = 0.1f;
+    private Color cachedOutlineColour;
+
     void Start()
     {
         Renderer renderer = GetComponent<Renderer>();
+
+        cachedOutlineColour = new Color( 0.0f, 0.9f, 0.1f );
         if( renderer )
         {
             material = renderer.material;
+            cachedOutlineThickness = material.GetFloat("_Outline");
+            cachedOutlineColour = material.GetColor("_OutlineColor");
+
+            // initialise material state
+            material.SetColor("_OutlineColor", new Color(0f, 0f, 0f, 1f));
+            material.SetFloat("_Outline", 0f);
         }
     }
 
     void OnMouseOver()
     {
-        material.SetColor("_OutlineColor", new Color(0f, 1f, 0.39f, 1f));
-        material.SetFloat("_Outline", 0.1f);
+        material.SetColor("_OutlineColor", cachedOutlineColour);
+        material.SetFloat("_Outline", cachedOutlineThickness);
     }
 
     private void OnMouseExit()
