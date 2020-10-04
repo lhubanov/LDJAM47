@@ -12,6 +12,9 @@ public class DragInteraction : MonoBehaviour
     private Vector3 pickupOffset;
     private float previousWorldY;
 
+    [SerializeField]
+    private bool addAsTargetOnDrop = false;
+
     public float heightOfPickup = 0.5f;
 
     public GameObject effect;
@@ -59,6 +62,15 @@ public class DragInteraction : MonoBehaviour
         if ( effect )
         {
             GameObject effectInstance = Instantiate( effect, transform.position, Quaternion.identity );
+        }
+
+        if ( addAsTargetOnDrop )
+        {
+            PlayerController controller = FindObjectOfType<PlayerController>();
+            if (controller)
+            {
+                controller.InsertObjective(transform.position);
+            }
         }
     }
 }

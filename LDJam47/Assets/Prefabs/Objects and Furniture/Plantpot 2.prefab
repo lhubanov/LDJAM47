@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 8414350535440550601}
   - component: {fileID: 5990122249634299395}
   - component: {fileID: 4963149115559977605}
+  - component: {fileID: 5721831234004319844}
+  - component: {fileID: 2179654431867023581}
+  - component: {fileID: 3978514759884974244}
   m_Layer: 0
   m_Name: Plantpot 2
   m_TagString: Untagged
@@ -59,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f9f2686ceaffa34c8dee2d1cc6703c7, type: 2}
+  - {fileID: 2100000, guid: acf506233d70ad84f843922f9c8a8456, type: 2}
   - {fileID: -876546973899608171, guid: 8e88cd3a75c5fe347b8a2e61a570d0b7, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -95,3 +98,47 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: 8e88cd3a75c5fe347b8a2e61a570d0b7, type: 3}
+--- !u!114 &5721831234004319844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5197659757215883222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875b1fc858e00814dbaefae514073bf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+--- !u!54 &2179654431867023581
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5197659757215883222}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &3978514759884974244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5197659757215883222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82d993e90f1d3e4096778be48ab683b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addAsTargetOnDrop: 1
+  heightOfPickup: 0.5
+  effect: {fileID: 0}

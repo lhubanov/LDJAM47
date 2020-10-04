@@ -5,10 +5,16 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
     private int CurrentObjective = 0;
+
+    [SerializeField]
     private List<Vector3> Objectives;
-    public NavMeshAgent agent;
+
+    [SerializeField]
     private GameObject Home;
+
+    public NavMeshAgent agent;
 
     [SerializeField]
     private int TargetLeeway = 5;
@@ -25,7 +31,11 @@ public class PlayerController : MonoBehaviour
 
         GameObject[] ObjectiveMarkers = GameObject.FindGameObjectsWithTag("Objective");
 
-        Objectives = new List<Vector3>();
+        if( Objectives == null )
+        {
+            Objectives = new List<Vector3>();
+        }
+
         for (int i = 0; i < ObjectiveMarkers.Length; i = i + 1)
         {
             Objectives.Add( ObjectiveMarkers[i].transform.position );
@@ -71,6 +81,24 @@ public class PlayerController : MonoBehaviour
         else
         {
             agent.SetDestination(Objectives[CurrentObjective]);
+        }
+    }
+
+    public void InsertObjective( Vector3 newObjective )
+    {
+        if( Objectives == null )
+        {
+            Objectives = new List<Vector3>();
+        }
+
+        int insertionIndex = CurrentObjective + 1;
+        if( insertionIndex >= Objectives.Count )
+        {
+            Objectives.Add( newObjective );
+        }
+        else
+        {
+            Objectives.Insert(insertionIndex, newObjective);
         }
     }
 }
