@@ -58,14 +58,7 @@ public class DragInteraction : MonoBehaviour
     {
         if ( effect )
         {
-			Debug.Log("Instantiating effect prefab");
             GameObject effectInstance = Instantiate( effect, transform.position, Quaternion.identity );
-            SphericalInteractionBase sphericalEffect = effectInstance.GetComponent<SphericalInteractionBase>();
-            if ( sphericalEffect )
-            {
-                Debug.Log("enabling sphere effect");
-                sphericalEffect.enabled = true;
-            }
         }
     }
 }

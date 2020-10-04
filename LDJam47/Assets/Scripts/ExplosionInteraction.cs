@@ -6,15 +6,11 @@ using UnityEngine;
 public class ExplosionInteraction : SphericalInteractionBase
 {
     private float timeLeft;
-    void OnEnable()
-    {
-        timeLeft = 2.0f;
-    }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeLeft = 2.0f;
     }
 
     // Update is called once per frame
