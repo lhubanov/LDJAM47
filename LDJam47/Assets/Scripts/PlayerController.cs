@@ -6,15 +6,17 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour
 {
     private int CurrentObjective = 0;
-    private Vector3[] Objectives;
+    private List<Vector3> Objectives;
     public Camera cam;
     public NavMeshAgent agent;
+    private GameObject Home;
 
     [SerializeField]
     private int TargetLeeway = 5;
 
     private void Start()
     {
+        Home = GameObject.FindGameObjectWithTag("RobotHome");
         StartCycle();
     }
 
@@ -24,10 +26,10 @@ public class PlayerController : MonoBehaviour
 
         GameObject[] ObjectiveMarkers = GameObject.FindGameObjectsWithTag("Objective");
 
-        Objectives = new Vector3[ObjectiveMarkers.Length];
+        Objectives = new List<Vector3>();
         for (int i = 0; i < ObjectiveMarkers.Length; i = i + 1)
         {
-            Objectives[i] = ObjectiveMarkers[i].transform.position;
+            Objectives.Add( ObjectiveMarkers[i].transform.position );
         }
 
         agent.SetDestination(Objectives[CurrentObjective]);
@@ -35,33 +37,37 @@ public class PlayerController : MonoBehaviour
 
     void ProgramToReturnHome()
     {
-        GameObject RobotHome = GameObject.FindGameObjectWithTag("RobotHome");
-        if( RobotHome )
+        Home = GameObject.FindGameObjectWithTag("RobotHome");
+        if(Home)
         {
-            agent.SetDestination(RobotHome.transform.position);
+            agent.SetDestination(Home.transform.position);
         }
     }
 
-    bool IsWithinBound( float position, float target )
-    {
-        return position == Mathf.Clamp(position, target - TargetLeeway, target + TargetLeeway);
-    }
     // Update is called once per frame
     void Update()
     {
-        float dist = Vector3.Distance(agent.transform.position, Objectives[CurrentObjective]);
-        if ( dist < TargetLeeway  )
+        if( Objectives.Count > 0 )
         {
-            CompleteObjective();
+            float dist = Vector3.Distance(agent.transform.position, Objectives[CurrentObjective]);
+            if (dist < TargetLeeway)
+            {
+                CompleteObjective();
+            }
+        }
+        else if(  Vector3.Distance(agent.transform.position, Home.transform.position) < TargetLeeway)
+        {
+            StartCycle();
         }
     }
 
     void CompleteObjective()
     {
         CurrentObjective = CurrentObjective + 1;
-        if (CurrentObjective >= Objectives.Length )
+        if (CurrentObjective >= Objectives.Count )
         {
             ProgramToReturnHome();
+            Objectives.Clear();
         }
         else
         {
