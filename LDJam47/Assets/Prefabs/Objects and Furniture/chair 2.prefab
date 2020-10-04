@@ -12,6 +12,9 @@ GameObject:
   - component: {fileID: 1147411312181062369}
   - component: {fileID: 2884726860527296043}
   - component: {fileID: 199353116854281013}
+  - component: {fileID: -481815085055179517}
+  - component: {fileID: 5535164044503819420}
+  - component: {fileID: -7397363687271392971}
   m_Layer: 0
   m_Name: chair 2
   m_TagString: Untagged
@@ -93,3 +96,46 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8762105, y: 4.7576256, z: 2.104584}
   m_Center: {x: 0.19669616, y: 2.3919601, z: 0.00000023841858}
+--- !u!54 &-481815085055179517
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3677303150843166718}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &5535164044503819420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3677303150843166718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82d993e90f1d3e4096778be48ab683b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heightOfPickup: 0.5
+  effect: {fileID: 0}
+--- !u!114 &-7397363687271392971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3677303150843166718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875b1fc858e00814dbaefae514073bf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
