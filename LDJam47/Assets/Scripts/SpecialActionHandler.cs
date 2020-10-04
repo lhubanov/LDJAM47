@@ -12,13 +12,19 @@ public class SpecialActionHandler : MonoBehaviour
     private SpriteRenderer reactionSpriteRenderer;
 
     [SerializeField]
+    private SpriteRenderer robotSpriteRenderer;
+
+    [SerializeField]
     private Sprite[] reactionSprites;
+
+    [SerializeField]
+    private Sprite[] robotSprites;
 
 
     // FIXME: LH:
-        // - Need to add collider
-        // - Need to set right sprite before animating
-        //      - Then just play the same sprite animation?
+    // - Need to add collider
+    // - Need to set right sprite before animating
+    //      - Then just play the same sprite animation?
     // - Can play other animations/two animations at same time?
     // - Can play sounds
 
