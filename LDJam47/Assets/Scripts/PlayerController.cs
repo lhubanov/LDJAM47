@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
 {
     private int CurrentObjective = 0;
     private List<Vector3> Objectives;
-    public Camera cam;
     public NavMeshAgent agent;
     private GameObject Home;
 
