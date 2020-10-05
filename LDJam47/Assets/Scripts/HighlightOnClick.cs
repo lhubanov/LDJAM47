@@ -19,8 +19,8 @@ public class HighlightOnClick : MonoBehaviour
             material = renderer.material;
 
             // initialise material state
-            material.SetColor("_OutlineColor", cachedOutlineColour);
-            material.SetFloat("_Outline", cachedOutlineThickness);
+            material.SetColor("_OutlineColor", new Color(0f, 0f, 0f, 1f));
+            material.SetFloat("_Outline", 0f);
         }
     }
 

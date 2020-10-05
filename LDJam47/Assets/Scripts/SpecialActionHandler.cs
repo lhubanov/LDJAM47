@@ -51,12 +51,39 @@ public class SpecialActionHandler : MonoBehaviour
                     animator.Play( Animator.StringToHash("RobotSpriteReaction") );
                     break;
                 }
-            case SPECIAL_ACTION.SMILE:
+            case SPECIAL_ACTION.NEW_DISCOVERY:
                 {
-                    reactionSpriteRenderer.sprite = reactionSprites[(int)SPECIAL_ACTION.SMILE];
-                    robotSpriteRenderer.sprite = robotSprites[(int)SPECIAL_ACTION.HUM_MUSIC];
+                    reactionSpriteRenderer.sprite = reactionSprites[(int)SPECIAL_ACTION.NEW_DISCOVERY];
+                    robotSpriteRenderer.sprite = robotSprites[(int)SPECIAL_ACTION.NEW_DISCOVERY];
 
                     animator.Play( Animator.StringToHash("RobotSpriteReaction") );
+                    break;
+                }
+
+            case SPECIAL_ACTION.CLEANING:
+                {
+                    reactionSpriteRenderer.sprite = reactionSprites[(int)SPECIAL_ACTION.CLEANING];
+                    robotSpriteRenderer.sprite = robotSprites[(int)SPECIAL_ACTION.CLEANING];
+
+                    animator.Play(Animator.StringToHash("RobotSpriteReaction"));
+                    break;
+                }
+
+            case SPECIAL_ACTION.FIXING:
+                {
+                    reactionSpriteRenderer.sprite = reactionSprites[(int)SPECIAL_ACTION.FIXING];
+                    robotSpriteRenderer.sprite = robotSprites[(int)SPECIAL_ACTION.FIXING];
+
+                    animator.Play(Animator.StringToHash("RobotSpriteReaction"));
+                    break;
+                }
+
+            case SPECIAL_ACTION.EXCLAMATION:
+                {
+                    reactionSpriteRenderer.sprite = reactionSprites[(int)SPECIAL_ACTION.EXCLAMATION];
+                    robotSpriteRenderer.sprite = robotSprites[(int)SPECIAL_ACTION.EXCLAMATION];
+
+                    animator.Play(Animator.StringToHash("RobotSpriteReaction"));
                     break;
                 }
         }

@@ -5,7 +5,10 @@ using UnityEngine;
 public enum SPECIAL_ACTION : byte
 {
     HUM_MUSIC = 0,
-    SMILE
+    NEW_DISCOVERY,
+    CLEANING,
+    FIXING,
+    EXCLAMATION
 }
 
 public class SpecialActionEmitter : MonoBehaviour
