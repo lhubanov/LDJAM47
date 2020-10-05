@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Outlined_pot 4
+  m_Name: Outlined_barrel 3
   m_Shader: {fileID: 4800000, guid: 19e4558878eb6b443b7324456a2d9cc8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -74,6 +74,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.28868085, g: 0.9811321, b: 0.23602703, a: 1}
+    - _Color: {r: 0.23529413, g: 0.5686275, b: 0.5686275, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 0.2688679, g: 1, b: 0.41034374, a: 1}

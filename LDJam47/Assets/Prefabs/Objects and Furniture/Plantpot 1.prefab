@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 205634956082689868}
   - component: {fileID: 7753871929497878215}
   - component: {fileID: 8180678400238713466}
+  - component: {fileID: -8852953534818449471}
   m_Layer: 0
   m_Name: Plantpot 1
   m_TagString: Untagged
@@ -142,3 +143,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 0}
+--- !u!114 &-8852953534818449471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088052334366405185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1203a57f9e9c3c241be7ae57d76eeec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specialAction: 2

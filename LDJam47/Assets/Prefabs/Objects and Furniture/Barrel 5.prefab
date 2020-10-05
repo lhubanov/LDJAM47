@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 9006486559106881163}
   - component: {fileID: 6090197236032782578}
   - component: {fileID: 5239831691915110457}
+  - component: {fileID: 6694621381329047142}
+  - component: {fileID: -8926101448511973897}
   m_Layer: 0
   m_Name: Barrel 5
   m_TagString: Untagged
@@ -61,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9d918b7f014e78449b152c3fd8d090a4, type: 2}
+  - {fileID: 2100000, guid: 49901ff292c2706419af241403c05d2b, type: 2}
   - {fileID: -3846018093981099296, guid: 64a712afed5da894c84e03812d35bc9a, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -128,3 +130,29 @@ MonoBehaviour:
   addAsTargetOnDrop: 0
   heightOfPickup: 0.5
   effect: {fileID: 0}
+--- !u!114 &6694621381329047142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8087372151388662744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875b1fc858e00814dbaefae514073bf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+--- !u!114 &-8926101448511973897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8087372151388662744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1203a57f9e9c3c241be7ae57d76eeec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specialAction: 4

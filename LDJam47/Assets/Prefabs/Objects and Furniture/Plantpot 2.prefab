@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5721831234004319844}
   - component: {fileID: 2179654431867023581}
   - component: {fileID: 3978514759884974244}
+  - component: {fileID: 5996701609310931481}
   m_Layer: 0
   m_Name: Plantpot 2
   m_TagString: Untagged
@@ -142,3 +143,16 @@ MonoBehaviour:
   addAsTargetOnDrop: 1
   heightOfPickup: 0.5
   effect: {fileID: 0}
+--- !u!114 &5996701609310931481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5197659757215883222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1203a57f9e9c3c241be7ae57d76eeec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specialAction: 2

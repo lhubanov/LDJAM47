@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 8598210743988263299}
   - component: {fileID: 2273557157151450700}
   - component: {fileID: 432232167948180824}
+  - component: {fileID: -8448341809661585050}
+  - component: {fileID: 5722639691767717378}
   m_Layer: 0
   m_Name: Canister 3
   m_TagString: Untagged
@@ -61,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 278f97900d585b14cb935a471a056356, type: 2}
+  - {fileID: 2100000, guid: d3add3394e9a64343b7937a0dbc71774, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,4 +128,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addAsTargetOnDrop: 0
   heightOfPickup: 0.5
-  effect: {fileID: 0}
+  effect: {fileID: 5822814920483001625, guid: 46880387666adc74787ba3e6316df040, type: 3}
+--- !u!114 &-8448341809661585050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2673807373190592263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1203a57f9e9c3c241be7ae57d76eeec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  specialAction: 4
+--- !u!114 &5722639691767717378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2673807373190592263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875b1fc858e00814dbaefae514073bf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
