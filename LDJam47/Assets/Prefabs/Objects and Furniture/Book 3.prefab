@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8509343738217539540}
   - component: {fileID: 5905261733285876510}
   - component: {fileID: 5058142592958779284}
+  - component: {fileID: 3784140152304633802}
+  - component: {fileID: 2908029649782775488}
   m_Layer: 0
   m_Name: Book 3
   m_TagString: Untagged
@@ -95,3 +97,34 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -66333826979096818, guid: 941bf881f28646c43a9a74da828cc24e, type: 3}
+--- !u!54 &3784140152304633802
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5400739759756276427}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2908029649782775488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5400739759756276427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a82d993e90f1d3e4096778be48ab683b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addAsTargetOnDrop: 0
+  heightOfPickup: 0.5
+  effect: {fileID: 0}
