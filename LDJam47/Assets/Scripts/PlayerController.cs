@@ -87,17 +87,17 @@ public class PlayerController : MonoBehaviour
     {
         CurrentObjective = 0;
 
-        GameObject[] ObjectiveMarkers = GameObject.FindGameObjectsWithTag("Objective");
+        //GameObject[] ObjectiveMarkers = GameObject.FindGameObjectsWithTag("Objective");
 
-        if( Objectives == null )
-        {
-            Objectives = new List<GameObject>();
-        }
+        //if( Objectives == null )
+        //{
+        //    Objectives = new List<GameObject>();
+        //}
 
-        for (int i = 0; i < ObjectiveMarkers.Length; i = i + 1)
-        {
-            Objectives.Add( ObjectiveMarkers[i] );
-        }
+        //for (int i = 0; i < ObjectiveMarkers.Length; i = i + 1)
+        //{
+        //    Objectives.Add( ObjectiveMarkers[i] );
+        //}
 
         agent.SetDestination(GetCurrentObjectivePosition());
     }
