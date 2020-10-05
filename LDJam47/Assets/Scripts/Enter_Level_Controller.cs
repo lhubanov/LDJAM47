@@ -15,12 +15,12 @@ public class Enter_Level_Controller : MonoBehaviour
 
     public void load_next_level()
     {
-        StartCoroutine(load_level(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(load_level(SceneManager.GetActiveScene().buildIndex + 1, false ) );
     }
 
     public void reload_current_level()
     {
-        StartCoroutine(load_level(SceneManager.GetActiveScene().buildIndex));
+        StartCoroutine(load_level(SceneManager.GetActiveScene().buildIndex, true ) );
     }
     
     public void quit_game()
@@ -36,11 +36,14 @@ public class Enter_Level_Controller : MonoBehaviour
         Application.Quit();
     }
 
-    IEnumerator load_level(int level_index)
+    IEnumerator load_level(int level_index, bool ignore_trigger )
     {
-        transition.SetTrigger("Start");
+        if( !ignore_trigger )
+        {
+            transition.SetTrigger("Start");
+            yield return new WaitForSeconds(transition_time);
+        }
 
-        yield return new WaitForSeconds(transition_time);
         SceneManager.LoadScene(level_index);
     }
 }

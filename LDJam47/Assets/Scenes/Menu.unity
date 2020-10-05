@@ -2894,15 +2894,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Whilst observeing Stanley, youl notice that certain objects can be picked
-    up and moved.
-
-
-    Use these to try and affect Stanley by triggering emotions
-    and opening new rooms.
-
-
-    Have fun!'
+  m_text: "Whilst observing Stanley, you\u2019ll notice that certain objects can
+    be picked up and moved.\r\n\r\nUse these to try and affect Stanley by triggering
+    emotions and opening new rooms.\r\n\r\nHave fun!\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
