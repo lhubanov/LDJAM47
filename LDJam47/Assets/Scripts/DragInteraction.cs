@@ -16,6 +16,7 @@ public class DragInteraction : MonoBehaviour
     private bool addAsTargetOnDrop = false;
 
     public float heightOfPickup = 0.5f;
+    public float WaitTimer = 0.0f;
 
     public GameObject effect;
 
