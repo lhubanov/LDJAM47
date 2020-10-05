@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Timer
 {
@@ -47,6 +48,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject Home;
 
+    [SerializeField]
+    private GameObject End;
+
     public NavMeshAgent agent;
 
     [SerializeField]
@@ -69,6 +73,8 @@ public class PlayerController : MonoBehaviour
         InitialWait = new Timer();
 
         Home = GameObject.FindGameObjectWithTag("RobotHome");
+        End = GameObject.FindGameObjectWithTag("FinalDestination");
+
         Reset();
     }
 
@@ -153,6 +159,11 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        
+        if( Vector3.Distance( this.transform.position, End.transform.position ) < 5 )
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 
     Vector3 GetCurrentObjectivePosition()

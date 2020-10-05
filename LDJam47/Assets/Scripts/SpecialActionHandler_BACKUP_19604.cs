@@ -73,7 +73,12 @@ public class SpecialActionHandler : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+<<<<<<< HEAD
+        reactionSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         audio_timer = new SPECIAL_TIMER();
+     
+=======
+>>>>>>> 0f66fa6d8d76e2cf9dc95e019ae5710e4cd53461
     }
 
     private void OnTriggerEnter(Collider other)

@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a82d993e90f1d3e4096778be48ab683b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addAsTargetOnDrop: 0
+  addAsTargetOnDrop: 1
   heightOfPickup: 0.5
+  WaitTimer: 0
   effect: {fileID: 0}

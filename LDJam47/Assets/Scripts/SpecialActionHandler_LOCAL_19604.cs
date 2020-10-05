@@ -69,11 +69,12 @@ public class SpecialActionHandler : MonoBehaviour
     private int ANGRY_NOISE_INDEX = 3;
     private int NEUTRAL_NOISE_INDEX = 4;
 
-
     private void Start()
     {
         animator = GetComponent<Animator>();
+        reactionSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         audio_timer = new SPECIAL_TIMER();
+     
     }
 
     private void OnTriggerEnter(Collider other)

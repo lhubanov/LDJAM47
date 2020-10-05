@@ -138,8 +138,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a82d993e90f1d3e4096778be48ab683b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addAsTargetOnDrop: 0
+  addAsTargetOnDrop: 1
   heightOfPickup: 0.5
+  WaitTimer: 0
   effect: {fileID: 4673659368826423223, guid: cc3a1d4d58a9e80499c34e25fcfc9521, type: 3}
 --- !u!114 &-8157139411757070355
 MonoBehaviour:
@@ -154,3 +155,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   specialAction: 2
+  progressionManager: {fileID: 0}

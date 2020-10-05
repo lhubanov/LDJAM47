@@ -5,6 +5,9 @@ using UnityEngine;
 public class ProgressionManager : MonoBehaviour
 {
     [SerializeField]
+    private GameObject FinalDestinationTarget; 
+
+    [SerializeField]
     private SPECIAL_ACTION[] specialActionTypes;
 
     [SerializeField]
@@ -37,7 +40,11 @@ public class ProgressionManager : MonoBehaviour
 
         if( isGameFinished )
         {
-            Debug.Log( "Game Finished!" );
+            PlayerController controller = FindObjectOfType<PlayerController>();
+            if (controller)
+            {
+                controller.InsertObjective(FinalDestinationTarget.transform.position);
+            }
         }
     }
 }
