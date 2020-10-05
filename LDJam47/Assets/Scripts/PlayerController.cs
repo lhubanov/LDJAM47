@@ -19,6 +19,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int TargetLeeway = 5;
 
+    [SerializeField]
+    private float TimeTosleep = 10;
+
+    private float StartTime = 0;
+    private float TimeRemaining = 0;
+    private bool TimerActive = false;
+    
+
     private void Start()
     {
         Home = GameObject.FindGameObjectWithTag("RobotHome");
@@ -64,9 +72,29 @@ public class PlayerController : MonoBehaviour
                 CompleteObjective();
             }
         }
-        else if(  Vector3.Distance(agent.transform.position, Home.transform.position) < TargetLeeway)
+        else if( Vector3.Distance(agent.transform.position, Home.transform.position) < TargetLeeway)
         {
-            StartCycle();
+            if( TimerActive )
+            { 
+                if(TimeRemaining > 0)
+                {
+                    TimeRemaining -= Time.deltaTime;
+                }
+                else
+                {
+                    StartCycle();
+                    TimerActive = false;
+                }
+            }
+            else
+            {
+                // Start timer
+                StartTime = Time.deltaTime;
+                TimeRemaining = TimeTosleep;
+                TimerActive = true;
+
+                agent.transform.Rotate(new Vector3(0.0f, 180.0f, 0.0f));
+            }
         }
     }
 
