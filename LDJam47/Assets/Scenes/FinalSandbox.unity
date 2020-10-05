@@ -4054,6 +4054,11 @@ PrefabInstance:
       propertyPath: noiseSource
       value: 
       objectReference: {fileID: 695517221}
+    - target: {fileID: 6009726000891602248, guid: 301e9044df07a51479416cc3a307d0ec,
+        type: 3}
+      propertyPath: audiotimertime
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6562866181838528715, guid: 301e9044df07a51479416cc3a307d0ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6434,6 +6439,7 @@ MonoBehaviour:
   CurrentObjective: 0
   Objectives: []
   Home: {fileID: 0}
+  End: {fileID: 0}
   agent: {fileID: 695517220}
   TargetLeeway: 5
   TimeTosleep: 10
@@ -12423,6 +12429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8455810a2661848baab353cabcb22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FinalDestinationTarget: {fileID: 0}
   specialActionTypes: 0001
   specialActionsNeededToCompleteType: 0300000014000000
 --- !u!1 &2077652441
