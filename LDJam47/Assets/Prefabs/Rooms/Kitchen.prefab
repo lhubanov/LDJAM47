@@ -78,7 +78,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3744161431813847238
 Transform:
@@ -245,7 +245,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3782838423763748939
 Transform:
@@ -338,7 +338,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3782838424573294569
 Transform:
@@ -431,7 +431,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3782838424457901944
 Transform:
@@ -524,7 +524,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3782838424964045418
 Transform:
@@ -617,7 +617,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3782838424969389986
 Transform:
@@ -710,7 +710,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3782838424710046546
 Transform:
@@ -803,7 +803,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3782838424684187788
 Transform:
@@ -896,7 +896,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &3782838425557040758
 Transform:
@@ -1297,6 +1297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addAsTargetOnDrop: 0
   heightOfPickup: 0.5
+  WaitTimer: 0
   effect: {fileID: 4673659368826423223, guid: cc3a1d4d58a9e80499c34e25fcfc9521, type: 3}
 --- !u!1 &6865530797641364083
 GameObject:
@@ -1499,6 +1500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addAsTargetOnDrop: 0
   heightOfPickup: 0.5
+  WaitTimer: 0
   effect: {fileID: 0}
 --- !u!1 &8965938492113376858
 GameObject:
@@ -1639,6 +1641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addAsTargetOnDrop: 0
   heightOfPickup: 0.5
+  WaitTimer: 0
   effect: {fileID: 0}
 --- !u!1 &8965938492442720459
 GameObject:
@@ -1779,6 +1782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addAsTargetOnDrop: 0
   heightOfPickup: 0.5
+  WaitTimer: 0
   effect: {fileID: 0}
 --- !u!1 &8965938492940627103
 GameObject:
@@ -1919,6 +1923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addAsTargetOnDrop: 0
   heightOfPickup: 0.5
+  WaitTimer: 0
   effect: {fileID: 0}
 --- !u!1 &8965938493322899227
 GameObject:
@@ -2059,6 +2064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addAsTargetOnDrop: 0
   heightOfPickup: 0.5
+  WaitTimer: 0
   effect: {fileID: 0}
 --- !u!1 &8965938493588082598
 GameObject:
@@ -2199,6 +2205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addAsTargetOnDrop: 0
   heightOfPickup: 0.5
+  WaitTimer: 0
   effect: {fileID: 0}
 --- !u!1 &8965938493879029825
 GameObject:
@@ -2339,6 +2346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addAsTargetOnDrop: 0
   heightOfPickup: 0.5
+  WaitTimer: 0
   effect: {fileID: 0}
 --- !u!1001 &3793968651083109363
 PrefabInstance:
