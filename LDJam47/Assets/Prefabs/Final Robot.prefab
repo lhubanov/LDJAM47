@@ -529,11 +529,11 @@ MonoBehaviour:
   reactionSpriteRenderer: {fileID: 626130749582439182}
   robotSpriteRenderer: {fileID: 6625083505191503806}
   reactionSprites:
-  - {fileID: 21300000, guid: 40011a957f4c1b1428649b0053dc81da, type: 3}
-  - {fileID: 21300000, guid: b7b0553f07211e94c88610d448df0c1f, type: 3}
-  - {fileID: 21300000, guid: b7b0553f07211e94c88610d448df0c1f, type: 3}
-  - {fileID: 21300000, guid: b7b0553f07211e94c88610d448df0c1f, type: 3}
-  - {fileID: 21300000, guid: b7b0553f07211e94c88610d448df0c1f, type: 3}
+  - {fileID: 21300000, guid: a33362a713d7b0c46ada5e70d73f62e8, type: 3}
+  - {fileID: 21300000, guid: a33362a713d7b0c46ada5e70d73f62e8, type: 3}
+  - {fileID: 21300000, guid: c49f407d210a6b2498d44ac905cd97bc, type: 3}
+  - {fileID: 21300000, guid: 93f33919aa50a2b46b697e24ae32d5ef, type: 3}
+  - {fileID: 21300000, guid: 6b568c94e0e68e74c911f0a39b389968, type: 3}
   robotSprites:
   - {fileID: 21300000, guid: ae89736511b68404d8ef93143eba66c1, type: 3}
   - {fileID: 21300000, guid: ae89736511b68404d8ef93143eba66c1, type: 3}
