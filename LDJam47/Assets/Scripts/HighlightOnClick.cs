@@ -7,7 +7,7 @@ public class HighlightOnClick : MonoBehaviour
     private Material material;
 
     private float cachedOutlineThickness = 0.1f;
-    private Color cachedOutlineColour;
+    private Color cachedOutlineColour = new Color(0.1650943f, 1f, 0.2573221f, 1f);
 
     void Start()
     {
@@ -17,12 +17,10 @@ public class HighlightOnClick : MonoBehaviour
         if( renderer )
         {
             material = renderer.material;
-            cachedOutlineThickness = material.GetFloat("_Outline");
-            cachedOutlineColour = material.GetColor("_OutlineColor");
 
             // initialise material state
-            material.SetColor("_OutlineColor", new Color(0f, 0f, 0f, 1f));
-            material.SetFloat("_Outline", 0f);
+            material.SetColor("_OutlineColor", cachedOutlineColour);
+            material.SetFloat("_Outline", cachedOutlineThickness);
         }
     }
 
