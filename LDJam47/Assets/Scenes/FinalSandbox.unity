@@ -6668,7 +6668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentObjective: 0
-  Objectives:
+  CoreObjectives:
   - {fileID: 1433647079}
   - {fileID: 1939824030}
   - {fileID: 1157065427}
@@ -13060,7 +13060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8455810a2661848baab353cabcb22f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FinalDestinationTarget: {fileID: 0}
+  FinalDestinationTarget: {fileID: 221841340}
   specialActionTypes: 0001
   specialActionsNeededToCompleteType: 0300000014000000
 --- !u!1 &2077652441

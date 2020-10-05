@@ -43,7 +43,9 @@ public class PlayerController : MonoBehaviour
     private int CurrentObjective = 0;
 
     [SerializeField]
-    private List<GameObject> Objectives;
+    private List<GameObject> CoreObjectives;
+
+    private List<GameObject> Objectives; 
 
     [SerializeField]
     private GameObject Home;
@@ -86,19 +88,8 @@ public class PlayerController : MonoBehaviour
     void StartCycle()
     {
         CurrentObjective = 0;
-
-        //GameObject[] ObjectiveMarkers = GameObject.FindGameObjectsWithTag("Objective");
-
-        //if( Objectives == null )
-        //{
-        //    Objectives = new List<GameObject>();
-        //}
-
-        //for (int i = 0; i < ObjectiveMarkers.Length; i = i + 1)
-        //{
-        //    Objectives.Add( ObjectiveMarkers[i] );
-        //}
-
+        Objectives = new List<GameObject>(CoreObjectives);
+        
         agent.SetDestination(GetCurrentObjectivePosition());
     }
 
