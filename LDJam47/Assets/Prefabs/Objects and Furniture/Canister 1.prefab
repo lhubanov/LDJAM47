@@ -126,4 +126,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addAsTargetOnDrop: 0
   heightOfPickup: 0.5
-  effect: {fileID: 0}
+  effect: {fileID: 5822814920483001625, guid: 46880387666adc74787ba3e6316df040, type: 3}
