@@ -29,7 +29,7 @@ Transform:
   m_Children:
   - {fileID: 7324269037882140587}
   - {fileID: 7324269037171079433}
-  - {fileID: 7324269037449040360}
+  - {fileID: 5588683901476275767}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47,7 +47,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &7324269037171079433
 Transform:
@@ -66,98 +66,6 @@ Transform:
   m_Father: {fileID: 7324269036958797561}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7324269037449040366
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7324269037449040360}
-  - component: {fileID: 7324269037449040367}
-  m_Layer: 0
-  m_Name: Light01
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7324269037449040360
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7324269037449040366}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -12.16, y: -10.200562, z: 8.948046}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7324269036958797561}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!108 &7324269037449040367
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7324269037449040366}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 2
-  m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1 &7324269037882140586
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +80,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &7324269037882140587
 Transform:
@@ -230,7 +138,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &7075083130801371430
 Transform:
@@ -310,7 +218,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &7075083130648453260
 Transform:
@@ -390,7 +298,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &7075083130982835517
 Transform:
@@ -454,6 +362,91 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1001 &2790658130462696432
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7324269036958797561}
+    m_Modifications:
+    - target: {fileID: 7724964931941492166, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_Name
+      value: Neon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071297
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.70708394
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 89.995995
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.013286738
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8825158
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7cc14514a06d0145b62fe3f68dd0494, type: 3}
+--- !u!4 &5588683901476275767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7724964931941492167, guid: e7cc14514a06d0145b62fe3f68dd0494,
+    type: 3}
+  m_PrefabInstance: {fileID: 2790658130462696432}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7324269036264283364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -520,6 +513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Quarter Floor (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
@@ -601,6 +599,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: New Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91feee0b558941943b679bb870d463b7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91feee0b558941943b679bb870d463b7, type: 3}
 --- !u!4 &7075083131830124551 stripped
@@ -675,6 +678,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Quarter Floor (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
@@ -751,6 +759,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: New Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91feee0b558941943b679bb870d463b7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91feee0b558941943b679bb870d463b7, type: 3}
 --- !u!4 &7075083131566513580 stripped
@@ -825,6 +838,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Quarter Floor (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
@@ -976,6 +994,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quarter Floor (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
 --- !u!4 &7075083131459081257 stripped
@@ -1050,6 +1073,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Quarter Floor (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
@@ -1126,6 +1154,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: New Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91feee0b558941943b679bb870d463b7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91feee0b558941943b679bb870d463b7, type: 3}
 --- !u!4 &7075083131091976417 stripped
@@ -1200,6 +1233,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Quarter Floor (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
@@ -1281,6 +1319,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: New Wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91feee0b558941943b679bb870d463b7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91feee0b558941943b679bb870d463b7, type: 3}
 --- !u!4 &7075083131023461484 stripped
@@ -1355,6 +1398,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Quarter Floor (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
@@ -1431,6 +1479,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quarter Floor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
 --- !u!4 &7075083130683420351 stripped
@@ -1506,6 +1559,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quarter Floor (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
 --- !u!4 &7075083130651666553 stripped
@@ -1580,6 +1638,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Quarter Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
@@ -1671,6 +1734,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: New Wall With Window (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be5a38ccdacecb640af95b0aa8323828,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be5a38ccdacecb640af95b0aa8323828, type: 3}
 --- !u!4 &7075083130662919318 stripped
@@ -1745,6 +1813,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Quarter Floor (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
@@ -1826,6 +1899,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: New Wall (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91feee0b558941943b679bb870d463b7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91feee0b558941943b679bb870d463b7, type: 3}
 --- !u!4 &7075083130421756743 stripped
@@ -1900,6 +1978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Quarter Floor (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
@@ -1981,6 +2064,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: New Wall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 91feee0b558941943b679bb870d463b7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91feee0b558941943b679bb870d463b7, type: 3}
 --- !u!4 &7075083130097876769 stripped
@@ -2056,6 +2144,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quarter Floor (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
 --- !u!4 &7075083130051273817 stripped
@@ -2130,6 +2223,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Quarter Floor (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
@@ -2221,6 +2319,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: New Wall With Window
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be5a38ccdacecb640af95b0aa8323828,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be5a38ccdacecb640af95b0aa8323828, type: 3}
 --- !u!4 &7075083129980275508 stripped
@@ -2311,6 +2414,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: New Wall With Window (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be5a38ccdacecb640af95b0aa8323828,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be5a38ccdacecb640af95b0aa8323828, type: 3}
 --- !u!4 &7075083129922957971 stripped
@@ -2386,6 +2494,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quarter Floor (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
 --- !u!4 &7075083129809925497 stripped
@@ -2460,6 +2573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Quarter Floor (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7c5facaf556fc7746813b5ba4f8b0b49,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c5facaf556fc7746813b5ba4f8b0b49, type: 3}
