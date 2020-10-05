@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
         }
 
         
-        if( Vector3.Distance( this.transform.position, End.transform.position ) < 5 )
+        if( Vector3.Distance( agent.transform.position, End.transform.position ) < 5 )
         {
             SceneManager.LoadScene("Menu");
         }
