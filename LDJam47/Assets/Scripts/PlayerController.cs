@@ -3,13 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+public class Timer
+{
+    public void Start( float TimeToCount )
+    {
+        TimeRemaining = TimeToCount;
+        StartTime = Time.deltaTime;
+        TimerActive = true;
+    }
+    public void Tick()
+    {
+        TimeRemaining = TimeRemaining - Time.deltaTime - StartTime;
+    }
+
+    public bool HasFinished()
+    {
+        return TimeRemaining <= 0;
+    }
+    public void Reset()
+    {
+        StartTime = 0;
+        TimerActive = false;
+        TimeRemaining = 0;
+    }
+    public bool IsActive()
+    {
+        return TimerActive;
+    }
+
+    private float StartTime = 0;
+    private float TimeRemaining = 0;
+    private bool TimerActive = false;
+}
+
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private int CurrentObjective = 0;
 
     [SerializeField]
-    private List<Vector3> Objectives;
+    private List<GameObject> Objectives;
 
     [SerializeField]
     private GameObject Home;
@@ -22,15 +55,26 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float TimeTosleep = 10;
 
-    private float StartTime = 0;
-    private float TimeRemaining = 0;
-    private bool TimerActive = false;
-    
+    [SerializeField]
+    private float InitialWaitTime = 5;
 
+    private Timer SleepTimer;
+    private Timer ObjectiveTimer;
+    private Timer InitialWait;
+    
     private void Start()
     {
+        SleepTimer = new Timer();
+        ObjectiveTimer = new Timer();
+        InitialWait = new Timer();
+
         Home = GameObject.FindGameObjectWithTag("RobotHome");
-        StartCycle();
+        Reset();
+    }
+
+    private void Reset()
+    {
+        InitialWait.Start(InitialWaitTime);
     }
 
     void StartCycle()
@@ -41,15 +85,15 @@ public class PlayerController : MonoBehaviour
 
         if( Objectives == null )
         {
-            Objectives = new List<Vector3>();
+            Objectives = new List<GameObject>();
         }
 
         for (int i = 0; i < ObjectiveMarkers.Length; i = i + 1)
         {
-            Objectives.Add( ObjectiveMarkers[i].transform.position );
+            Objectives.Add( ObjectiveMarkers[i] );
         }
 
-        agent.SetDestination(Objectives[CurrentObjective]);
+        agent.SetDestination(GetCurrentObjectivePosition());
     }
 
     void ProgramToReturnHome()
@@ -64,69 +108,120 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( Objectives.Count > 0 )
+        if( InitialWait.IsActive() )
         {
-            float dist = Vector3.Distance(agent.transform.position, Objectives[CurrentObjective]);
-            if (dist < TargetLeeway)
+            if( InitialWait.HasFinished() )
             {
-                CompleteObjective();
-            }
-        }
-        else if( Vector3.Distance(agent.transform.position, Home.transform.position) < TargetLeeway)
-        {
-            if( TimerActive )
-            { 
-                if(TimeRemaining > 0)
-                {
-                    TimeRemaining -= Time.deltaTime;
-                }
-                else
-                {
-                    StartCycle();
-                    TimerActive = false;
-                }
+                InitialWait.Reset();
+                StartCycle();
             }
             else
             {
-                // Start timer
-                StartTime = Time.deltaTime;
-                TimeRemaining = TimeTosleep;
-                TimerActive = true;
-
-                agent.transform.Rotate(new Vector3(0.0f, 180.0f, 0.0f));
+                InitialWait.Tick();
             }
         }
+        else
+        {
+            if (Objectives.Count > 0)
+            {
+                float dist = Vector3.Distance(agent.transform.position, GetCurrentObjectivePosition());
+                if (dist < TargetLeeway)
+                {
+                    CompleteObjective();
+                }
+            }
+            else if (Vector3.Distance(agent.transform.position, Home.transform.position) < TargetLeeway)
+            {
+                if (SleepTimer.IsActive())
+                {
+                    if (!SleepTimer.HasFinished())
+                    {
+                        SleepTimer.Tick();
+                    }
+                    else
+                    {
+                        StartCycle();
+                        SleepTimer.Reset();
+                    }
+                }
+                else
+                {
+                    SleepTimer.Start(TimeTosleep);
+
+                    agent.transform.Rotate(new Vector3(0.0f, 180.0f, 0.0f));
+                }
+            }
+        }
+
     }
 
-    void CompleteObjective()
+    Vector3 GetCurrentObjectivePosition()
+    {
+        return Objectives[CurrentObjective].transform.position;
+    }
+
+    void SetNextTarget()
     {
         CurrentObjective = CurrentObjective + 1;
-        if (CurrentObjective >= Objectives.Count )
+        if (CurrentObjective >= Objectives.Count)
         {
             ProgramToReturnHome();
             Objectives.Clear();
         }
         else
         {
-            agent.SetDestination(Objectives[CurrentObjective]);
+            agent.SetDestination(GetCurrentObjectivePosition());
         }
     }
 
-    public void InsertObjective( Vector3 newObjective )
+    void CompleteObjective()
     {
-        if( Objectives == null )
+        if (ObjectiveTimer.IsActive())
         {
-            Objectives = new List<Vector3>();
-        }
-
-        int insertionIndex = CurrentObjective + 1;
-        if( insertionIndex >= Objectives.Count )
-        {
-            Objectives.Add( newObjective );
+            if (ObjectiveTimer.HasFinished())
+            {
+                ObjectiveTimer.Reset();
+                SetNextTarget();
+            }
+            else
+            {
+                ObjectiveTimer.Tick();
+            }
         }
         else
         {
-            Objectives.Insert(insertionIndex, newObjective);
+            // If current objective has a wait timer lets wait 
+            GameObject Objective = Objectives[CurrentObjective];
+            RobotTargetScript Script = Objective.GetComponent<RobotTargetScript>();
+            if (Script && Script.WaitTimer > 0)
+            {
+                ObjectiveTimer.Start(Script.WaitTimer);
+            }
+            else
+            {
+                SetNextTarget();
+            }
+        }
+    }
+
+    public void InsertObjective(Vector3 position)
+    {
+        if( Objectives == null )
+        {
+            Objectives = new List<GameObject>();
+        }
+
+        int insertionIndex = CurrentObjective + 1;
+
+        GameObject NewObjective = new GameObject();
+        NewObjective.transform.position = position;
+        if ( insertionIndex >= Objectives.Count )
+        {
+            Objectives.Add(NewObjective);
+        }
+        else
+        {
+            Objectives.Insert(insertionIndex, NewObjective);
         }
     }
 }
