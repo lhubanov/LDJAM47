@@ -21,10 +21,10 @@ public class SpecialActionHandler : MonoBehaviour
     private Sprite[] robotSprites;
 
 
+
     private void Start()
     {
         animator = GetComponent<Animator>();
-        reactionSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void OnTriggerEnter( Collider other )

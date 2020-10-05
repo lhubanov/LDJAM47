@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Objective
   - RobotHome
+  - FinalDestination
   layers:
   - Default
   - TransparentFX
