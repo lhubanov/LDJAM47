@@ -3302,6 +3302,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 1.2999998
       objectReference: {fileID: 0}
+    - target: {fileID: 7594316040468135815, guid: 377ad81420c8d21418c680f909922121,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8242874036935836233, guid: 377ad81420c8d21418c680f909922121,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -3774,6 +3779,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 4.309
       objectReference: {fileID: 0}
+    - target: {fileID: 2777852011413080063, guid: fe18114f93e545b4c9666b78dbc54693,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777852011613656560, guid: fe18114f93e545b4c9666b78dbc54693,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777852011880405348, guid: fe18114f93e545b4c9666b78dbc54693,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3924778550701532843, guid: fe18114f93e545b4c9666b78dbc54693,
         type: 3}
       propertyPath: m_Name
@@ -3833,6 +3853,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721775745069077559, guid: fe18114f93e545b4c9666b78dbc54693,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721775745069077559, guid: fe18114f93e545b4c9666b78dbc54693,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.05762797
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721775745069077559, guid: fe18114f93e545b4c9666b78dbc54693,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.055922948
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721775745069077559, guid: fe18114f93e545b4c9666b78dbc54693,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.73006725
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721775745069077559, guid: fe18114f93e545b4c9666b78dbc54693,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6786409
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721775745069077559, guid: fe18114f93e545b4c9666b78dbc54693,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721775745069077559, guid: fe18114f93e545b4c9666b78dbc54693,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721775745069077559, guid: fe18114f93e545b4c9666b78dbc54693,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 9.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721775745069077559, guid: fe18114f93e545b4c9666b78dbc54693,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 94.16601
+      objectReference: {fileID: 0}
+    - target: {fileID: 4721775745069077559, guid: fe18114f93e545b4c9666b78dbc54693,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -0.19700001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe18114f93e545b4c9666b78dbc54693, type: 3}
@@ -6808,6 +6878,9 @@ PrefabInstance:
     - target: {fileID: 1593790374109842823, guid: 3a6161fdbbd2bc440b37376b76c11485,
         type: 3}
       propertyPath: addAsTargetOnDrop
+    - target: {fileID: 424160180185644148, guid: 3a6161fdbbd2bc440b37376b76c11485,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2225366591904357793, guid: 3a6161fdbbd2bc440b37376b76c11485,
@@ -10924,7 +10997,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
