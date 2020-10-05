@@ -55,16 +55,26 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float TimeTosleep = 10;
 
+    [SerializeField]
+    private float InitialWaitTime = 5;
+
     private Timer SleepTimer;
     private Timer ObjectiveTimer;
+    private Timer InitialWait;
     
     private void Start()
     {
-        Home = GameObject.FindGameObjectWithTag("RobotHome");
-        StartCycle();
-
         SleepTimer = new Timer();
         ObjectiveTimer = new Timer();
+        InitialWait = new Timer();
+
+        Home = GameObject.FindGameObjectWithTag("RobotHome");
+        Reset();
+    }
+
+    private void Reset()
+    {
+        InitialWait.Start(InitialWaitTime);
     }
 
     void StartCycle()
@@ -98,35 +108,51 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( Objectives.Count > 0 )
+        if( InitialWait.IsActive() )
         {
-            float dist = Vector3.Distance(agent.transform.position, GetCurrentObjectivePosition());
-            if (dist < TargetLeeway)
+            if( InitialWait.HasFinished() )
             {
-                CompleteObjective();
-            }
-        }
-        else if( Vector3.Distance(agent.transform.position, Home.transform.position) < TargetLeeway)
-        {
-            if( SleepTimer.IsActive() )
-            {
-                if( !SleepTimer.HasFinished() )
-                {
-                    SleepTimer.Tick();
-                }
-                else
-                {
-                    StartCycle();
-                    SleepTimer.Reset();
-                }
+                InitialWait.Reset();
+                StartCycle();
             }
             else
             {
-                SleepTimer.Start(TimeTosleep);
-
-                agent.transform.Rotate(new Vector3(0.0f, 180.0f, 0.0f));
+                InitialWait.Tick();
             }
         }
+        else
+        {
+            if (Objectives.Count > 0)
+            {
+                float dist = Vector3.Distance(agent.transform.position, GetCurrentObjectivePosition());
+                if (dist < TargetLeeway)
+                {
+                    CompleteObjective();
+                }
+            }
+            else if (Vector3.Distance(agent.transform.position, Home.transform.position) < TargetLeeway)
+            {
+                if (SleepTimer.IsActive())
+                {
+                    if (!SleepTimer.HasFinished())
+                    {
+                        SleepTimer.Tick();
+                    }
+                    else
+                    {
+                        StartCycle();
+                        SleepTimer.Reset();
+                    }
+                }
+                else
+                {
+                    SleepTimer.Start(TimeTosleep);
+
+                    agent.transform.Rotate(new Vector3(0.0f, 180.0f, 0.0f));
+                }
+            }
+        }
+
     }
 
     Vector3 GetCurrentObjectivePosition()
