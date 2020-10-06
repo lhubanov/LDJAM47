@@ -2,44 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SPECIAL_TIMER
-{
-    public void Start(float TimeToCount)
-    {
-        TimeRemaining = TimeToCount;
-        StartTime = Time.deltaTime;
-        TimerActive = true;
-    }
-    public void Tick()
-    {
-        TimeRemaining = TimeRemaining - Time.deltaTime - StartTime;
-    }
-
-    public bool HasFinished()
-    {
-        return TimeRemaining <= 0;
-    }
-    public void Reset()
-    {
-        StartTime = 0;
-        TimerActive = false;
-        TimeRemaining = 0;
-    }
-    public bool IsActive()
-    {
-        return TimerActive;
-    }
-
-    private float StartTime = 0;
-    private float TimeRemaining = 0;
-    private bool TimerActive = false;
-}
-
 public class SpecialActionHandler : MonoBehaviour
 {
     bool has_been_ten_secs_since_last_audio_reaction = true;
-    public float audiotimertime = 10000;
-    public SPECIAL_TIMER audio_timer;
+    public float audiotimertime = 3;
+    public Timer audio_timer;
 
     // Emoji animator
     [SerializeField]
@@ -73,7 +40,8 @@ public class SpecialActionHandler : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        audio_timer = new SPECIAL_TIMER();
+        audio_timer = new Timer();
+        audio_timer.Start( 0 );
     }
 
     private void OnTriggerEnter(Collider other)
@@ -93,6 +61,8 @@ public class SpecialActionHandler : MonoBehaviour
             noiseSource.clip = robotNoises[soundIndex]; 
             noiseSource.Play();
             has_been_ten_secs_since_last_audio_reaction = false;
+
+            audio_timer.Reset();
             audio_timer.Start(audiotimertime);
         }
     }

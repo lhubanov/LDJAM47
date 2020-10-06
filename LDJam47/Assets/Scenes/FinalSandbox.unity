@@ -4159,7 +4159,7 @@ PrefabInstance:
     - target: {fileID: 6009726000891602248, guid: 301e9044df07a51479416cc3a307d0ec,
         type: 3}
       propertyPath: audiotimertime
-      value: 100
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6562866181838528715, guid: 301e9044df07a51479416cc3a307d0ec,
         type: 3}

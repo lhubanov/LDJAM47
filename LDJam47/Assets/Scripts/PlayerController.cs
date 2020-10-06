@@ -4,39 +4,6 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
-public class Timer
-{
-    public void Start( float TimeToCount )
-    {
-        TimeRemaining = TimeToCount;
-        StartTime = Time.deltaTime;
-        TimerActive = true;
-    }
-    public void Tick()
-    {
-        TimeRemaining = TimeRemaining - Time.deltaTime - StartTime;
-    }
-
-    public bool HasFinished()
-    {
-        return TimeRemaining <= 0;
-    }
-    public void Reset()
-    {
-        StartTime = 0;
-        TimerActive = false;
-        TimeRemaining = 0;
-    }
-    public bool IsActive()
-    {
-        return TimerActive;
-    }
-
-    private float StartTime = 0;
-    private float TimeRemaining = 0;
-    private bool TimerActive = false;
-}
-
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]

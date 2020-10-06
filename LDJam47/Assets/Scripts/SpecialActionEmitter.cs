@@ -52,6 +52,9 @@ public class SpecialActionEmitter : MonoBehaviour
                 progressionManager.CompleteActionOfType(specialAction);
             }
 
+			cooldownTimer.Reset();
+			cooldownTimer.Start( cooldown );
+
             return specialAction;
         }
 
