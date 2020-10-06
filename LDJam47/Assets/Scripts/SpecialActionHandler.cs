@@ -86,11 +86,11 @@ public class SpecialActionHandler : MonoBehaviour
         }
     }
 
-    void playnoise(int soundindex )
+    private void PlayNoise(int soundIndex )
     {
         if (!noiseSource.isPlaying && audio_timer.HasFinished())
         {
-            noiseSource.clip = robotNoises[soundindex]; 
+            noiseSource.clip = robotNoises[soundIndex]; 
             noiseSource.Play();
             has_been_ten_secs_since_last_audio_reaction = false;
             audio_timer.Start(audiotimertime);
@@ -99,7 +99,7 @@ public class SpecialActionHandler : MonoBehaviour
 
     void Update()
     {
-        if (audio_timer.IsActive())
+        if ( audio_timer.IsActive() )
         {
             audio_timer.Tick();
         }
@@ -117,7 +117,7 @@ public class SpecialActionHandler : MonoBehaviour
                 robotSpriteRenderer.sprite = robotSprites[(int)SPECIAL_ACTION.HUM_MUSIC];
               
                 animator.Play(Animator.StringToHash("RobotSpriteReaction"));
-                playnoise(HAPPY_NOISE_INDEX);
+                PlayNoise(HAPPY_NOISE_INDEX);
 
                 break;
             }
@@ -127,7 +127,7 @@ public class SpecialActionHandler : MonoBehaviour
                 robotSpriteRenderer.sprite = robotSprites[(int)SPECIAL_ACTION.NEW_DISCOVERY];
 
                 animator.Play(Animator.StringToHash("RobotSpriteReaction"));
-                playnoise(SURPRISED_NOISE_INDEX);
+                PlayNoise(SURPRISED_NOISE_INDEX);
                 break;
             }
 
@@ -137,7 +137,7 @@ public class SpecialActionHandler : MonoBehaviour
                 robotSpriteRenderer.sprite = robotSprites[(int)SPECIAL_ACTION.CLEANING];
 
                 animator.Play(Animator.StringToHash("RobotSpriteReaction"));
-                playnoise(SAD_NOISE_INDEX);
+                PlayNoise(SAD_NOISE_INDEX);
                 break;
             }
 
@@ -147,7 +147,7 @@ public class SpecialActionHandler : MonoBehaviour
                 robotSpriteRenderer.sprite = robotSprites[(int)SPECIAL_ACTION.FIXING];
 
                 animator.Play(Animator.StringToHash("RobotSpriteReaction"));
-                playnoise(ANGRY_NOISE_INDEX);
+                PlayNoise(ANGRY_NOISE_INDEX);
                 break;
             }
 
@@ -157,7 +157,7 @@ public class SpecialActionHandler : MonoBehaviour
                 robotSpriteRenderer.sprite = robotSprites[(int)SPECIAL_ACTION.EXCLAMATION];
 
                 animator.Play(Animator.StringToHash("RobotSpriteReaction"));
-                playnoise(HAPPY_NOISE_INDEX);
+                PlayNoise(HAPPY_NOISE_INDEX);
                 break;
             }
         }

@@ -8,7 +8,8 @@ public enum SPECIAL_ACTION : byte
     NEW_DISCOVERY,
     CLEANING,
     FIXING,
-    EXCLAMATION
+    EXCLAMATION,
+    NONE
 }
 
 public class SpecialActionEmitter : MonoBehaviour
@@ -19,19 +20,41 @@ public class SpecialActionEmitter : MonoBehaviour
     [SerializeField]
     private ProgressionManager progressionManager;
 
+    [SerializeField]
+    private float cooldown = 5f;
+
+    private Timer cooldownTimer;
+    
+
     private void Start()
     {
         progressionManager = GameObject.FindObjectOfType<ProgressionManager>();
+
+        cooldownTimer = new Timer();
+        cooldownTimer.Start(cooldown);
+    }
+
+    private void Update()
+    {
+        if (cooldownTimer.IsActive())
+        {
+            cooldownTimer.Tick();
+        }
     }
 
     public SPECIAL_ACTION GetSpecialAction()
     {
-        if( specialAction == SPECIAL_ACTION.NEW_DISCOVERY || 
-            specialAction == SPECIAL_ACTION.HUM_MUSIC )
+        if ( cooldownTimer.IsActive() && cooldownTimer.HasFinished() )
         {
-            progressionManager.CompleteActionOfType( specialAction );
+            if (specialAction == SPECIAL_ACTION.NEW_DISCOVERY ||
+            specialAction == SPECIAL_ACTION.HUM_MUSIC)
+            {
+                progressionManager.CompleteActionOfType(specialAction);
+            }
+
+            return specialAction;
         }
 
-        return specialAction;
+        return SPECIAL_ACTION.NONE;
     }
 }
