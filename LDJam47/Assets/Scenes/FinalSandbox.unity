@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7462965}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 22316920}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 50140949}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CameraColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 64447576}
   - component: {fileID: 64447578}
   - component: {fileID: 64447577}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TableStorageRoom
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -918,7 +918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 155021904}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1566,7 +1566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 228213702}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1596,7 +1596,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 233540686}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1626,7 +1626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 233733915}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1670,7 +1670,7 @@ GameObject:
   - component: {fileID: 247259704}
   - component: {fileID: 247259706}
   - component: {fileID: 247259705}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CommsRoom1
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1984,7 +1984,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 312687202}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2223,7 +2223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 366752922}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2322,7 +2322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 405414468}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RoboStoragePosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2740,7 +2740,7 @@ GameObject:
   - component: {fileID: 511531312}
   - component: {fileID: 511531313}
   - component: {fileID: 511531314}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CorridorToSleepingPods
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -2869,7 +2869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 520812591}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2968,7 +2968,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 536436193}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RoboStorageTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3523,7 +3523,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 626050899}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3791,7 +3791,7 @@ GameObject:
   - component: {fileID: 662838800}
   - component: {fileID: 662838802}
   - component: {fileID: 662838801}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CommsRoom2
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -4342,7 +4342,7 @@ GameObject:
   - component: {fileID: 706559330}
   - component: {fileID: 706559332}
   - component: {fileID: 706559331}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Corridor2
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -4404,7 +4404,7 @@ GameObject:
   - component: {fileID: 724042315}
   - component: {fileID: 724042317}
   - component: {fileID: 724042316}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Corridor1
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -4804,7 +4804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 837673275}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5044,7 +5044,7 @@ GameObject:
   - component: {fileID: 898347380}
   - component: {fileID: 898347382}
   - component: {fileID: 898347381}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BackToStart
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -6467,7 +6467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1137755618}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6572,7 +6572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1155809952}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CorridorToSleepingPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7639,7 +7639,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1218974933}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7751,7 +7751,7 @@ GameObject:
   - component: {fileID: 1233565461}
   - component: {fileID: 1233565463}
   - component: {fileID: 1233565462}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Corridor3_preKitchen
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -8685,7 +8685,7 @@ GameObject:
   - component: {fileID: 1387511251}
   - component: {fileID: 1387511253}
   - component: {fileID: 1387511252}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: KitchenCrossroads
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -8896,7 +8896,7 @@ GameObject:
   - component: {fileID: 1432432961}
   - component: {fileID: 1432432959}
   - component: {fileID: 1432432960}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: RobotStorage
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -9098,7 +9098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1468411766}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9222,7 +9222,7 @@ GameObject:
   - component: {fileID: 1499448902}
   - component: {fileID: 1499448904}
   - component: {fileID: 1499448903}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTask
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -9369,7 +9369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1552182897}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9647,7 +9647,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1584736775}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9677,7 +9677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1585626354}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10139,7 +10139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1652037186}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10273,7 +10273,7 @@ GameObject:
   - component: {fileID: 1663476757}
   - component: {fileID: 1663476759}
   - component: {fileID: 1663476758}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShuttleBay
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -10487,7 +10487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1692971336}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CorridorToSleepingTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10517,7 +10517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1702173621}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11146,7 +11146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1758301661}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11251,7 +11251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1775752787}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11780,7 +11780,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1882331428}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11886,7 +11886,7 @@ GameObject:
   - component: {fileID: 1895785348}
   - component: {fileID: 1895785349}
   - component: {fileID: 1895785350}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPods
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -11980,7 +11980,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1913469692}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12012,7 +12012,7 @@ GameObject:
   - component: {fileID: 1935827984}
   - component: {fileID: 1935827986}
   - component: {fileID: 1935827985}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CorridorBigComputerRoom
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -12391,7 +12391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2036765167}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12423,7 +12423,7 @@ GameObject:
   - component: {fileID: 2037206208}
   - component: {fileID: 2037206210}
   - component: {fileID: 2037206209}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CommsRoom3
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -13077,7 +13077,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2077652442}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13107,7 +13107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2090271394}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SleepingPodsTaskPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
