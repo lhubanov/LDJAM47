@@ -73,7 +73,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 0
-    m_BakeBackend: 2
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 128
@@ -1077,6 +1077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addAsTargetOnDrop: 0
   heightOfPickup: 0.5
+  WaitTimer: 0
   effect: {fileID: 0}
 --- !u!135 &1759175416
 SphereCollider:
@@ -1558,7 +1559,7 @@ PrefabInstance:
     - target: {fileID: 1336100334224339953, guid: 9ed7a34490388a74390e37c875eeb883,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5.1
       objectReference: {fileID: 0}
     - target: {fileID: 1336100334224339953, guid: 9ed7a34490388a74390e37c875eeb883,
         type: 3}
@@ -1568,7 +1569,7 @@ PrefabInstance:
     - target: {fileID: 1336100334224339953, guid: 9ed7a34490388a74390e37c875eeb883,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 72.7
       objectReference: {fileID: 0}
     - target: {fileID: 1336100334224339953, guid: 9ed7a34490388a74390e37c875eeb883,
         type: 3}

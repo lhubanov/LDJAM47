@@ -111,7 +111,7 @@
                 fixed4 col = fixed4( 0.0, 0.0, 0.0, 1.0 ); //tex2D(_MainTex, i.uv);
 
                 float2 uv = input.uv - 0.5;
-                float t = -_Time.y * 0.3;
+                float t = -_Time.y * 0.03;
 
                 float twirl = sin( t * 0.1 );
                 float d = dot( uv, uv );
@@ -158,6 +158,8 @@
                     col += rays * bla * 0.1 * burstFade;
                     col += 1.0 - burstFade;
                 }
+
+				col.rgb = saturate( col.rgb );
 
                 col.a = lerp( 0.0, 1.0, dot( col.rgb, col.rgb ) );
 
