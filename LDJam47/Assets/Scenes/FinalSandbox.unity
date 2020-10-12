@@ -4121,6 +4121,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Final Robot
       objectReference: {fileID: 0}
+    - target: {fileID: 5789426428807789169, guid: 301e9044df07a51479416cc3a307d0ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6009726000891602248, guid: 301e9044df07a51479416cc3a307d0ec,
         type: 3}
       propertyPath: robotNoises.Array.size
